@@ -31,7 +31,7 @@ header .headerContainer {
    padding: 0 1%;
    max-width: 900px;
    margin: auto;
-   gap: 40px;
+   gap: 30px;
 }
 .leftSide,
 .rightSide {
@@ -70,6 +70,18 @@ header .headerContainer {
 }
 .leftSide button:hover{
     background-color: #74b9ff;
+    color: #333;
+}
+
+.rightSide{
+   display: flex;
+}
+
+.container .rightSide .grid{
+   flex:1;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
 }
 
 @media (max-width: 1080px) {

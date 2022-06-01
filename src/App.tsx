@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import styles from './app.module.css';
-
 import poweredImg from './assets/img/powered.png';
+
+import {levels, calculateImc} from './helper/imc';
+import {GridItem} from './components/GridItem';
+
 
 function App() {
    const [heightField, setHeightFiled] = useState<number>(0);
@@ -11,6 +14,7 @@ function App() {
       if (!heightField || !weightField) {
          alert('Preencha todos os campos!');
       }
+      
    };
 
    return (
@@ -44,7 +48,13 @@ function App() {
 
                <button onClick={handleCalculateButton}>Calcular</button>
             </div>
-            <div className={styles.rightSide}>....</div>
+            <div className={styles.rightSide}>
+               <div className={styles.grid}>
+                  {levels.map((item,key)=>(
+                     <GridItem key={key} data={item} />
+                  ))}
+               </div>
+            </div>
          </div>
       </div>
    );
