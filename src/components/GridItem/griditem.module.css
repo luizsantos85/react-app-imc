@@ -7,6 +7,7 @@
     flex-direction: column;
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 
 .gridIcon{
@@ -27,5 +28,10 @@
 
 .gridInfo{
     font-size: .9rem;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+}
+
+.yourImc{
+    font-size: 1.1rem;
+    margin: 10px 0 30px 0;
 }

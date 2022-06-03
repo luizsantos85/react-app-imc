@@ -25,7 +25,9 @@ header .headerContainer {
    margin: 40px auto;
    padding: 0 1%;
 }
-
+.main{
+   padding-bottom: 50px;
+}
 .container {
    display: flex;
    padding: 0 1%;
@@ -38,50 +40,77 @@ header .headerContainer {
    flex: 1;
 }
 
-.leftSide h1{
-    font-size: 3rem;
-    color: #3a4b5c;
+.leftSide h1 {
+   font-size: 3rem;
+   color: #3a4b5c;
 }
-.leftSide p{
-    font-size: 1rem;
-    margin-bottom: 40px;
-    color: #6a7d8b;
-    line-height: 1.2rem;
+.leftSide p {
+   font-size: 1rem;
+   margin-bottom: 40px;
+   color: #6a7d8b;
+   line-height: 1.2rem;
 }
-.leftSide input{
-    width: 100%;
-    margin-bottom: 15px;
-    border: 0;
-    border-bottom: 2px solid rgba(150, 163, 170, .5);
-    padding: 10px 5px;
-    font-size: .9rem;
+.leftSide input {
+   width: 100%;
+   margin-bottom: 15px;
+   border: 0;
+   border-bottom: 2px solid rgba(150, 163, 170, 0.5);
+   padding: 10px 5px;
+   font-size: 0.9rem;
 }
-
-.leftSide button{
-    background-color: #0984e3;
-    color: #fff;
-    padding: 15px;
-    border: 0;
-    font-size: 1.2rem;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 30px;
-    transition: all ease .3s;
-}
-.leftSide button:hover{
-    background-color: #74b9ff;
-    color: #333;
+.leftSide input:disabled {
+   opacity: 0.5;
 }
 
-.rightSide{
+.leftSide button {
+   background-color: #0984e3;
+   color: #fff;
+   padding: 15px;
+   border: 0;
+   font-size: 1.2rem;
+   width: 100%;
+   border-radius: 10px;
+   margin-top: 30px;
+   transition: all ease 0.3s;
+}
+.leftSide button:hover {
+   background-color: #74b9ff;
+   color: #333;
+}
+.leftSide button:disabled {
+   background-color: #74b9ff;
+   color: #333;
+   opacity: 0.5;
+}
+
+.rightSide {
    display: flex;
 }
 
-.container .rightSide .grid{
-   flex:1;
+.container .rightSide .grid {
+   flex: 1;
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 20px;
+}
+
+.container .rightSide .rightBig {
+   flex: 1;
+   display: flex;
+}
+.rightArrow {
+   position: absolute;
+   background-color: #3498db;
+   padding: 15px;
+   border-radius: 50%;
+   margin-top: 140px;
+   transform: translateX(-50%);
+   transition: all ease 0.3s;
+   cursor: pointer;
+}
+
+.rightArrow:hover {
+   background-color: #74b9ff;
 }
 
 @media (max-width: 1080px) {
@@ -93,5 +122,24 @@ header .headerContainer {
 @media (max-width: 720px) {
    html {
       font-size: 87.5%;
+   }
+}
+
+@media (max-width: 768px) {
+   .container {
+      flex-direction: column;
+   }
+
+   .rightArrow {
+      margin-top: 0;
+      left: 8px;
+      border-radius: 10px;
+      transform: rotate(90deg);
+   }
+}
+
+@media (max-width: 550px) {
+   .container .rightSide .grid {
+      grid-template-columns: 1fr;
    }
 }
