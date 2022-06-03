@@ -10,7 +10,7 @@ Projeto desenvolvido no curso de react com typescript da B7web
 
 ## Descrição :book:
 
-Projeto desenvolvido no curso de react com typescript da B7web
+Projeto em React + Typescript, onde foi desenvolvido uma calculadora de IMC.
 
 ---
 
